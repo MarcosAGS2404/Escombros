@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOMBROS</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+<body>
+    
+    <header class="header">
+        
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" id="logo" href="index.html">
+                </a>
+
+                <nav class="navegacion">
+                    <a href="historia.html" class="navegacion__enlace">Historia</a>
+                    <a href="galeria.html" class="navegacion__enlace">Galeria</a>
+                    <a href="acercade.html" class="navegacion__enlace">Contacto</a>
+                    <a href="fechas.html" class="navegacion__enlace">Fechas</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="header__texto">
+            <h1 class="no-margin">ESCOMBROS</h2>
+            <p class="no-margin">El rock sin fronterass</p>
+            <a href="" class="boton boton--primario">Videos</a>
+            <a href="" class="boton boton--primario">Fotos</a>
+            <a href="" class="boton boton--primario">Podcast</a>
+        </div>
+
+    </header>
+
+    <div class="contenedor">
+        <main class="blog">
+            <div class="imagenes">
+                <h2>Fotos de la banda</h2>
+                <div class="grid-gallery">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 1">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 2">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 3">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 4">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 5">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 6">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 7">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 8">
+                    <img src="https://via.placeholder.com/400x300" alt="Imagen 9">
+                </div>
+            </div>
+
+            <div class="videos">
+                <h2>Carrusel de Videos</h2>
+                <div class="video-carousel">
+                    <div class="video-container2" id="carousel">
+                        <!-- Video 1 -->
+                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+            
+                        <!-- Video 2 -->
+                        <iframe src="https://www.youtube.com/embed/sBws8MSXN7A" allowfullscreen></iframe>
+            
+                        <!-- Video 3 -->
+                        <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" allowfullscreen></iframe>
+                    </div>
+            
+                    <!-- Botones de navegación -->
+                    <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+                </div>
+        
+                    <!-- Botones de navegación del carrusel -->
+                    <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+                
+            </div>
+
+            <div class="podcast">
+                <h2>Escucha nuestro podcast</h2>
+                <div class="video-container">
+                <iframe width="1120" height="630" margin="1rem" src="https://www.youtube.com/embed/vg95MYlTb3c?si=lOdcvKK9OGhRRXeF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+        
+        
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    
+                </a>
+                <a href="index.html"><h1 class="logo_text">ESCOM<span class="logo__bold">BROS</span></h1></a>
+                
+
+                <nav class="navegacion">
+                    <a href="historia.html" class="navegacion__enlace">Historia</a>
+                    <a href="galeria.html" class="navegacion__enlace">Galeria</a>
+                    <a href="acercade.html" class="navegacion__enlace">Contacto</a>
+                    <a href="fechas.html" class="navegacion__enlace">Fechas</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function nextSlide() {
+            const carousel = document.getElementById('carousel');
+            const videos = carousel.children;
+            currentSlide = (currentSlide + 1) % videos.length;  // Avanza al siguiente video
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function prevSlide() {
+            const carousel = document.getElementById('carousel');
+            const videos = carousel.children;
+            currentSlide = (currentSlide - 1 + videos.length) % videos.length;  // Vuelve al video anterior
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>

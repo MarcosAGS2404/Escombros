@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería en Forma de Red</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Contenedor de la galería */
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste automático de columnas */
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efectos al pasar el ratón */
+        .grid-gallery img:hover {
+            transform: scale(1.05); /* Zoom al pasar el mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            .grid-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste para pantallas más pequeñas */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Galería de Fotos en Forma de Red</h2>
+
+    <div class="grid-gallery">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 1">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 2">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 3">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 4">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 5">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 6">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 7">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 8">
+        <img src="https://via.placeholder.com/400x300" alt="Imagen 9">
+    </div>
+
+</body>
+</html>

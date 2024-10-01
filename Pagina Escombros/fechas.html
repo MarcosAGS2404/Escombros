@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOMBROS</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css">
+<body>
+    
+    <header class="header">
+        
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" id="logo" href="index.html">
+                </a>
+
+                <nav class="navegacion">
+                    <a href="historia.html" class="navegacion__enlace">Historia</a>
+                    <a href="galeria.html" class="navegacion__enlace">Galeria</a>
+                    <a href="acercade.html" class="navegacion__enlace">Contacto</a>
+                    <a href="fechas.html" class="navegacion__enlace">Fechas</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="header__texto">
+            <h1 class="no-margin">ESCOMBROS</h2>
+            <p class="no-margin">El rock sin fronterass</p>
+            <a href="" class="boton boton--primario">Conciertos</a>
+            <a href="" class="boton boton--primario">Reuniones con fans</a>
+            <a href="" class="boton boton--primario">Tour de prensa</a>
+        </div>
+
+    </header>
+
+    <div class="contenedor">
+        <main class="blog">
+           
+            <h2>Nuestros eventos</h2>
+            
+            <div id="map"></div>
+
+            
+            
+        </div>
+
+        </main>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    
+                </a>
+                <a href="index.html"><h1 class="logo_text">ESCOM<span class="logo__bold">BROS</span></h1></a>
+                
+
+                <nav class="navegacion">
+                    <a href="historia.html" class="navegacion__enlace">Historia</a>
+                    <a href="galeria.html" class="navegacion__enlace">Galeria</a>
+                    <a href="acercade.html" class="navegacion__enlace">Contacto</a>
+                    <a href="fechas.html" class="navegacion__enlace">Fechas</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+            <script>
+                var map = L.map('map').setView([40.7128, -74.0060], 13); // Coordenadas de Nueva York
+        
+                // Cargar el mapa de OpenStreetMap
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                // Añadir un marcador
+                L.marker([40.7128, -74.0060]).addTo(map)
+                    .bindPopup('Estamos aquí.')
+                    .openPopup();
+            </script>
+    
+</body>
+</html>
