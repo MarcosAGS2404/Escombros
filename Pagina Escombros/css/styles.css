@@ -253,8 +253,8 @@ body{
 
 /*mapita*/
 #map {
-    height: 400px;
-    width: 50%;
+    height: 500px;
+    width: 90%;
     align-items: end;
     margin: 2rem;
 }
@@ -304,7 +304,7 @@ body{
     transition: transform 0.5s ease;
 }
 
-.video-container2 iframe {
+.video-container iframe {
     width: 100%;
     height: 500px;
     flex-shrink: 0;

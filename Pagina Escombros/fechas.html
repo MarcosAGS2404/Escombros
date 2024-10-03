@@ -13,6 +13,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+         /* Contenedor principal que alinea el mapa y el panel de forma horizontal */
+         .container {
+            display: flex; /* Flexbox para organizar en una fila */
+            height: 100vh; /* Ajusta la altura del contenedor a toda la ventana */
+        }
+
+
+        #event-panel {
+            width: 30%; /* 30% del ancho para el panel de eventos */
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow-y: auto; /* Agregar scroll si el contenido del panel es demasiado largo */
+        }
+
+        .event-button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .event-button:hover {
+            background-color: #555;
+        }
+    </style>
 <body>
     
     <header class="header">
@@ -33,7 +67,7 @@
         
         <div class="header__texto">
             <h1 class="no-margin">ESCOMBROS</h2>
-            <p class="no-margin">El rock sin fronterass</p>
+            <p class="no-margin">El rock sin fronteras</p>
             <a href="" class="boton boton--primario">Conciertos</a>
             <a href="" class="boton boton--primario">Reuniones con fans</a>
             <a href="" class="boton boton--primario">Tour de prensa</a>
@@ -42,15 +76,30 @@
     </header>
 
     <div class="contenedor">
-        <main class="blog">
+        <main >
            
             <h2>Nuestros eventos</h2>
-            
+            <!-- Contenedor del mapa -->
             <div id="map"></div>
 
+            <!-- Panel lateral con botones para eventos -->
+            <div id="event-panel">
+                <h3>Próximos Eventos</h3>
+                <button class="event-button" onclick="goToEvent(40.730610, -73.935242, 'Rock Festival', '15 de Octubre')">
+                    Rock Festival - 15 de Octubre
+                </button>
+                <button class="event-button" onclick="goToEvent(34.052235, -118.243683, 'Jazz Night', '20 de Octubre')">
+                    Jazz Night - 20 de Octubre
+                </button>
+                <button class="event-button" onclick="goToEvent(51.507351, -0.127758, 'Indie Pop Live', '25 de Octubre')">
+                    Indie Pop Live - 25 de Octubre
+                </button>
+                <button class="event-button" onclick="goToEvent(48.856613, 2.352222, 'Electronic Beats', '30 de Octubre')">
+                    Electronic Beats - 30 de Octubre
+                </button>
+            </div>
+                
             
-            
-        </div>
 
         </main>
         
